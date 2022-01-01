@@ -31,9 +31,14 @@ import {
   Container,
 } from "reactstrap";
 
+import ContactForm from "../Contact";
+
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+
+  const [modal, setModal] = React.useState(false);
+  const toggleModal = () => setModal(!modal);
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
@@ -67,11 +72,11 @@ function IndexNavbar() {
         <div className="navbar-translate">
           <NavbarBrand
             data-placement="bottom"
-            href="/index"
-            target="_blank"
-            title="Coded by Creative Tim"
+            href="/home"
+            title="Home"
           >
-            Paper Kit React
+          <i className="fa fa-home" />
+          <p className="d-lg-none">Home</p>
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -85,6 +90,7 @@ function IndexNavbar() {
             <span className="navbar-toggler-bar bar3" />
           </button>
         </div>
+
         <Collapse
           className="justify-content-end"
           navbar
@@ -94,40 +100,25 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://twitter.com/CreativeTim?ref=creativetim"
-                target="_blank"
-                title="Follow us on Twitter"
-              >
-                <i className="fa fa-twitter" />
-                <p className="d-lg-none">Twitter</p>
+                href={'/about-me'}
+              >About Me
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                href="https://www.linkedin.com/in/tigerlilly-zietz-722b54168"
                 target="_blank"
-                title="Like us on Facebook"
+                title="Follow me on LinkedIn"
               >
-                <i className="fa fa-facebook-square" />
-                <p className="d-lg-none">Facebook</p>
+                <i className="fa fa-linkedin" />
+                <p className="d-lg-none">LinkedIn</p>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-                target="_blank"
-                title="Follow us on Instagram"
-              >
-                <i className="fa fa-instagram" />
-                <p className="d-lg-none">Instagram</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.github.com/CreativeTimOfficial/paper-kit-react?ref=creativetim"
+                href="https://github.com/tigerlillyzietz"
                 target="_blank"
                 title="Star on GitHub"
               >
@@ -137,24 +128,23 @@ function IndexNavbar() {
             </NavItem>
             <NavItem>
               <NavLink
-                href="https://demos.creative-tim.com/paper-kit-react/#/documentation?ref=pkr-index-navbar"
-                target="_blank"
-              >
-                <i className="nc-icon nc-book-bookmark" /> Documentation
+                data-placement="bottom"
+                href={'/resume'}
+              >Resume
               </NavLink>
             </NavItem>
             <NavItem>
-              <Button
-                className="btn-round"
-                color="danger"
-                href="https://www.creative-tim.com/product/paper-kit-pro-react?ref=pkr-index-navbar"
-                target="_blank"
-              >
-                <i className="nc-icon nc-spaceship"></i> Upgrade to Pro
-              </Button>
-            </NavItem>
-          </Nav>
-        </Collapse>
+                            <Button
+                                className="btn-round"
+                                onClick={toggleModal}
+                                style={{backgroundColor: 'white', color: '#969696', border: "none"}}
+                            >
+                                <i className="fa fa-paper-plane" style={{color: '#969696'}} /> Contact Me
+                            </Button>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
+                <ContactForm modal={modal} toggle={toggleModal}/>
       </Container>
     </Navbar>
   );

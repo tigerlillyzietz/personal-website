@@ -30,31 +30,23 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
-// others
+import Resume from "views/examples/Resume.js";
 
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/index" render={(props) => <Index {...props} />} />
+      <Route path="/home" render={(props) => <Index {...props} />} />
       <Route
-        path="/nucleo-icons"
-        render={(props) => <NucleoIcons {...props} />}
-      />
-      <Route
-        path="/landing-page"
-        render={(props) => <LandingPage {...props} />}
-      />
-      <Route
-        path="/profile-page"
+        path="/about-me"
         render={(props) => <ProfilePage {...props} />}
       />
       <Route
-        path="/register-page"
-        render={(props) => <RegisterPage {...props} />}
+        path="/resume"
+        render={(props) => <Resume {...props} />}
       />
-      <Redirect to="/index" />
+      <Redirect to="/home" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
