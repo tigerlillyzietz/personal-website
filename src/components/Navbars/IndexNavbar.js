@@ -72,7 +72,7 @@ function IndexNavbar() {
         <div className="navbar-translate">
           <NavbarBrand
             data-placement="bottom"
-            href="/home"
+            href={'/#/'}
             title="Home"
           >
           <i className="fa fa-home" />
@@ -100,7 +100,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href={'/about-me'}
+                href={'/#/about-me'}
               >About Me
               </NavLink>
             </NavItem>
@@ -129,7 +129,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href={'/resume'}
+                href={'/#/resume'}
               >Resume
               </NavLink>
             </NavItem>

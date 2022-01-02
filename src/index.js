@@ -18,7 +18,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 
 // styles
 import "bootstrap/scss/bootstrap.scss";
@@ -35,9 +35,8 @@ import Resume from "views/examples/Resume.js";
 
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/home" render={(props) => <Index {...props} />} />
+  <HashRouter basename='/'>
+      <Route exact path="/" render={(props) => <Index {...props} />} />
       <Route
         path="/about-me"
         render={(props) => <ProfilePage {...props} />}
@@ -46,8 +45,6 @@ ReactDOM.render(
         path="/resume"
         render={(props) => <Resume {...props} />}
       />
-      <Redirect to="/home" />
-    </Switch>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );
