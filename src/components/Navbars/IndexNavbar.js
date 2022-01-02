@@ -72,7 +72,7 @@ function IndexNavbar() {
         <div className="navbar-translate">
           <NavbarBrand
             data-placement="bottom"
-            href={'/#/'}
+            href={'/'}
             title="Home"
           >
           <i className="fa fa-home" />
