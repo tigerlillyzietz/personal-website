@@ -69,17 +69,19 @@ function ProfilePage() {
               />
             </div>
             <div className="name">
-              <h4 className="title">
+              <h2 className="title">
                 <b>Tigerlilly Zietz</b> <br />
-              </h4>
-              <h5 className="description">Loyola Marymount University<br/><b>Computer Science & Pure Mathematics</b><br/> Class of 2022</h5>
+              </h2>
+              <h6 className="description">Loyola Marymount University<br/><b>Computer Science & Pure Mathematics</b><br/> Class of 2022</h6>
+              <hr/>
             </div>
           </div>
           <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
-                My name is Tigerlilly Zietz.
-              </p>
+            <Col className="ml-auto mr-auto text-center" md="9">
+              <h5>
+              I am a Software Engineer from the North Shore of Kauai, Hawaii. I will be graduating in May of 2022 with a Bachelor of Science degree with a major in Computer Science and a minor in Pure Mathematics from Loyola Marymount University located in Los Angeles, California. Through internships and schooling I have gained experience in developing, shipping, monitoring, and maintaining software with solid test infrastructure. I have expertise in accomplishing tasks in an orderly and practical manner due to my detail-oriented and methodical approach to problem-solving paired with my constant drive to catalyze, optimize, and unveil potential errors and imperfections. While working at Digital Media Solutions participating in daily stand-up meetings gave me the skills necessary to work on a collaborative team and meet deadlines. My weekly engagement in scrum methodology has led me to be proficient in working and communicating with team members with differing perspectives. I developed the skills to organize tasks and reflect on results in order to continuously improve both as a team and as an individual. I have a strong passion for programming and I am excited and optimistic about what the future holds!
+
+              </h5>
             </Col>
           </Row>
 

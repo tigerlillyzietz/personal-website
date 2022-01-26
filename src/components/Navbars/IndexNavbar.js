@@ -107,7 +107,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.linkedin.com/in/tigerlilly-zietz-722b54168"
+                href="https://www.linkedin.com/in/tigerlillyzietz/"
                 target="_blank"
                 title="Follow me on LinkedIn"
               >
